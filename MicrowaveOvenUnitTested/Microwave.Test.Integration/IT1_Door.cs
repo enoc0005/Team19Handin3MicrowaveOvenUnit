@@ -44,6 +44,8 @@ namespace Microwave.Test.Integration
         public void OpenDoor_LightOn()
         {
             _door.Open();
+
+            //Assert
             _light.Received(1).TurnOn();
         }
     }
