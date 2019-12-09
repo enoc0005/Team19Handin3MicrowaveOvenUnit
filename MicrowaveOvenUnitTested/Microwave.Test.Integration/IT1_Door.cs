@@ -32,12 +32,13 @@ namespace Microwave.Test.Integration
             _timeButton = new Button();
             _powerButton = new Button();
             _door = new Door();
-            _ut = new UserInterface(_powerButton, _timeButton, _SCButton, _door, _display, _light, _ckController);
 
             //fakes
             _ckController = Substitute.For<ICookController>();
             _light = Substitute.For<ILight>();
             _display = Substitute.For<IDisplay>();
+
+            _ut = new UserInterface(_powerButton, _timeButton, _SCButton, _door, _display, _light, _ckController);
         }
 
         [Test]
